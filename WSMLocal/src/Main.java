@@ -16,7 +16,8 @@ public class Main {
 
         SpatialLocation candidateLocation = new SpatialLocation(rangeStart, 0,0);
 
-        for (int i = 0; i < 100; i++) {
+        logger.StartLogging();
+        for (int i = 0; i < 100000; i++) {
 
             double resultantField = 0;
             resultantField = AmplitudeSum.GetAmpSumSansMotion(proton.getConstituentParticles(), candidateLocation);
@@ -24,5 +25,6 @@ public class Main {
 
             candidateLocation.X += ConfigurableConstants.DistanceStepSize;
         }
+        logger.StopLogging();
     }
 }
