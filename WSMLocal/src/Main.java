@@ -11,13 +11,12 @@ public class Main {
         Logger logger = new Logger();
         Proton proton = new Proton();
 
-        double rangeStart = 1e-11;
-        double rangeStop = 1e-13;
-
-        SpatialLocation candidateLocation = new SpatialLocation(rangeStart, 0,0);
+        double xStart = ConfigurableConstants.RangeStart;
+        double xEnd = ConfigurableConstants.RangeEnd;
+        SpatialLocation candidateLocation = new SpatialLocation(xStart, 0,0);
 
         logger.StartLogging();
-        for (int i = 0; i < 100000; i++) {
+        while(candidateLocation.X < xEnd) {
 
             double resultantField = 0;
             resultantField = AmplitudeSum.GetAmpSumSansMotion(proton.getConstituentParticles(), candidateLocation);

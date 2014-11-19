@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="WSMLocal:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WSMLocal_jar</output-path>
+    <root id="archive" name="WSMLocal.jar">
+      <element id="module-output" name="WSMLocal" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/commons-csv-1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
